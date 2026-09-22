@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakelin Ninaraqui Pelaiza | Mariscal Nieto 2027-2030</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: { DEFAULT: '#b91c1c', dark: '#991b1b', light: '#fef2f2' },
+                        secondary: '#0f172a',
+                        accent: { DEFAULT: '#facc15', dark: '#ca8a04' },
+                    },
+                    animation: {
+                        'float': 'float 5s ease-in-out infinite',
+                        'pulse-yellow': 'pulseYellow 2.5s infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-12px)' },
+                        },
+                        pulseYellow: {
+                            '0%, 100%': { boxShadow: '0 0 0 0 rgba(250, 204, 21, 0.6)' },
+                            '50%': { boxShadow: '0 0 0 20px rgba(250, 204, 21, 0)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hero-badge {
+            animation: pulseYellow 2.5s infinite;
+        }
+        /* Offset for fixed navbar when scrolling to sections */
+        html { scroll-padding-top: 90px; }
+        
+        /* Custom Scrollbar for aesthetic */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+        /* Animación Marquesina (Ticker) */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: fit-content;
+            animation: marquee 25s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+        
+        /* Gradient Text Utility */
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased selection:bg-accent selection:text-secondary overflow-x-hidden relative">
+
+    <!-- Imagen de fondo general -->
+    <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/807284917_122143883079100298_1808323475710834822_n.jpg?raw=true" 
+         alt="Fondo de Campaña" 
+         class="fixed inset-0 w-full h-full object-cover object-center z-[-2] pointer-events-none">
+    
+    <!-- Capa semitransparente SIN desenfoque para mantener el fondo nítido y leer los textos -->
+    <div class="fixed inset-0 bg-transparent z-[-1] pointer-events-none"></div>
+
+    <!-- Navegación Superior -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300">
+        <!-- Colorful Border Bottom -->
+        <div class="h-1 w-full bg-gradient-to-r from-primary via-accent to-blue-600"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <!-- Marca / Logotipo -->
+                <a href="#inicio" class="flex items-center gap-3 group">
+                    <div class="bg-gradient-to-br from-slate-50 to-slate-200 p-1.5 rounded-full shadow-sm ring-1 ring-slate-300 group-hover:scale-105 transition-transform">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Acci%C3%B3n_Popular.svg" alt="AP Logo" class="w-8 h-8 object-contain">
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-heading font-black text-xl text-secondary tracking-tight group-hover:text-primary transition-colors">Jakelin Ninaraqui</span>
+                        <span class="text-[10px] font-bold text-primary tracking-widest uppercase -mt-1">Alcaldía 2027-2030</span>
+                    </div>
+                </a>
+
+                <!-- Links Escritorio -->
+                <div class="hidden md:flex space-x-8 items-center font-bold text-sm">
+                    <a href="#inicio" class="text-slate-700 hover:text-primary transition-colors">Inicio</a>
+                    <a href="#dimensiones" class="text-slate-700 hover:text-primary transition-colors">Plan de Gobierno</a>
+                    <a href="#galeria" class="text-slate-700 hover:text-primary transition-colors">Gestión en Chen Chen</a>
+                    <a href="#obras-propuestas" class="text-slate-700 hover:text-primary transition-colors">Obras Propuestas</a>
+                    <a href="#transparencia" class="text-slate-700 hover:text-primary transition-colors">Transparencia</a>
+                    
+                    <!-- Redes Sociales en Navbar -->
+                    <div class="flex items-center gap-3 pl-4 border-l border-slate-200">
+                        <a href="https://www.facebook.com/profile.php?id=61583008940407" target="_blank" class="w-8 h-8 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/jakelin.ninaraqui/?hl=es" target="_blank" class="w-8 h-8 rounded-full bg-[#E1306C]/10 text-[#E1306C] flex items-center justify-center hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@jakelin.ninaraqui?_r=1&_t=ZS-99lId6RMDaa" target="_blank" class="w-8 h-8 rounded-full bg-slate-200 text-slate-800 flex items-center justify-center hover:bg-black hover:text-white transition-all"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Botón Menú Móvil -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-primary text-2xl focus:outline-none p-2 rounded-lg hover:bg-red-50 transition-colors" aria-label="Abrir menú">
+                    <i id="mobileMenuIcon" class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-6 py-4 space-y-2 absolute w-full shadow-2xl">
+            <a href="#inicio" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-3 px-2 rounded-lg hover:bg-red-50 hover:text-primary transition-colors">Inicio</a>
+            <a href="#dimensiones" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-3 px-2 rounded-lg hover:bg-red-50 hover:text-primary transition-colors">Plan de Gobierno</a>
+            <a href="#galeria" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-3 px-2 rounded-lg hover:bg-red-50 hover:text-primary transition-colors">Gestión en Chen Chen</a>
+            <a href="#obras-propuestas" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-3 px-2 rounded-lg hover:bg-red-50 hover:text-primary transition-colors">Obras Propuestas</a>
+            <a href="#transparencia" onclick="toggleMobileMenu()" class="block text-slate-700 font-bold py-3 px-2 rounded-lg hover:bg-red-50 hover:text-primary transition-colors">Transparencia</a>
+            
+            <!-- Redes Sociales en Móvil -->
+            <div class="flex justify-center gap-4 pt-4 mt-2 border-t border-slate-100 pb-2">
+                <a href="https://www.facebook.com/profile.php?id=61583008940407" target="_blank" class="w-10 h-10 rounded-full bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center text-lg"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/jakelin.ninaraqui/?hl=es" target="_blank" class="w-10 h-10 rounded-full bg-[#E1306C]/10 text-[#E1306C] flex items-center justify-center text-lg"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@jakelin.ninaraqui?_r=1&_t=ZS-99lId6RMDaa" target="_blank" class="w-10 h-10 rounded-full bg-slate-200 text-slate-800 flex items-center justify-center text-lg"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Barra Social Flotante Lateral (Solo Desktop) -->
+    <div class="hidden lg:flex fixed left-0 top-1/2 transform -translate-y-1/2 flex-col gap-3 z-40 p-2.5 bg-white/90 backdrop-blur-md rounded-r-3xl shadow-[4px_0_20px_rgba(0,0,0,0.08)] border border-slate-200 border-l-0">
+        <a href="https://www.facebook.com/profile.php?id=61583008940407" target="_blank" class="w-12 h-12 rounded-2xl bg-[#1877F2]/10 text-[#1877F2] flex items-center justify-center text-xl hover:bg-[#1877F2] hover:text-white transition-all shadow-sm group relative" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f group-hover:scale-110 transition-transform"></i>
+        </a>
+        <a href="https://www.instagram.com/jakelin.ninaraqui/?hl=es" target="_blank" class="w-12 h-12 rounded-2xl bg-[#E1306C]/10 text-[#E1306C] flex items-center justify-center text-xl hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:text-white transition-all shadow-sm group relative" aria-label="Instagram">
+            <i class="fa-brands fa-instagram group-hover:scale-110 transition-transform"></i>
+        </a>
+        <a href="https://www.tiktok.com/@jakelin.ninaraqui?_r=1&_t=ZS-99lId6RMDaa" target="_blank" class="w-12 h-12 rounded-2xl bg-slate-200 text-slate-800 flex items-center justify-center text-xl hover:bg-black hover:text-white transition-all shadow-sm group relative" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok group-hover:scale-110 transition-transform"></i>
+        </a>
+    </div>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="relative pt-32 pb-20 lg:pt-44 lg:pb-28 min-h-[95vh] flex items-center bg-cover bg-center bg-no-repeat bg-fixed"
+             style="background-image: url('https://scontent-lim1-1.xx.fbcdn.net/v/t39.30808-6/495217535_1315006103387110_6233049145048458579_n.jpg?stp=dst-jpg_tt6&cstp=mx1617x599&ctp=s1617x599&_nc_cat=102&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=rqunjCAb8ZoQ7kNvwHB1rw6&_nc_oc=AdqDbe1bGRr0xZGPDylPtcR7-aj37SjbPd551MqXBoGdGpxXnMXlMLsPmrJqxVF4o-M&_nc_zt=23&_nc_ht=scontent-lim1-1.xx&_nc_gid=lujdOTg0UfRqCaVIRUAqZA&_nc_ss=7b289&oh=00_AQIYPqvI8Nbwjsd586VjmE8eG6R5142LSccx-tGT6JRx5Q&oe=6AA8C00E');">
+        
+        <!-- Overlay colorido -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-950/95 via-secondary/90 to-blue-900/80 z-0"></div>
+        
+        <!-- Ola decorativa -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-0">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[60px] md:h-[90px] lg:h-[130px]">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C79.4,116.3,156.4,115.1,232.4,95.8c29.6-7.5,59.3-17.4,88.99-39.36Z" fill="#f8fafc"></path>
+            </svg>
+        </div>
+
+        <!-- Bandera AP Fondo -->
+        <div class="absolute inset-0 overflow-hidden z-0 flex items-center justify-center lg:justify-end opacity-[0.15] pointer-events-none">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Acci%C3%B3n_Popular.svg" alt="Bandera AP" class="w-[150%] sm:w-[120%] lg:w-[800px] h-auto transform -rotate-12 lg:-translate-x-10">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 text-center lg:text-left order-2 lg:order-1 animate-fade-in-up">
+                    <div class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-primary-dark text-white font-bold text-sm mb-6 border border-red-400/30 shadow-lg">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Acci%C3%B3n_Popular.svg" alt="Lampa Acción Popular" class="w-4 h-4 object-contain brightness-0 invert">
+                        Partido Político Acción Popular
+                    </div>
+                    
+                    <h1 class="font-heading font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] mb-6 drop-shadow-lg">
+                        Gestión Técnica y Social con <br class="hidden sm:block" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent via-yellow-200 to-amber-400 italic underline decoration-white/20 underline-offset-8">Manos Limpias</span>
+                    </h1>
+                    
+                    <p class="text-base sm:text-lg md:text-xl text-slate-100 mb-10 max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed drop-shadow-md">
+                        Candidata a la Alcaldía Provincial de Mariscal Nieto. Juntos construiremos una provincia conectada, saludable, agrícola y 100% transparente.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start">
+                        <a href="#dimensiones" class="px-8 py-4 rounded-full bg-primary hover:bg-primary-dark text-white font-bold text-base transition-all shadow-[0_10px_25px_rgba(185,28,28,0.4)] hover:-translate-y-1 flex items-center justify-center gap-2 border border-red-500">
+                            Ver Plan de Gobierno <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#obras-propuestas" class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/25 backdrop-blur-md text-white font-bold text-base border border-white/40 transition-all shadow-lg flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-helmet-safety text-accent"></i> Obras Propuestas
+                        </a>
+                    </div>
+                    
+                    <!-- Cuenta Regresiva Elecciones -->
+                    <div class="mt-10 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 inline-block shadow-2xl">
+                        <p class="text-accent text-xs font-bold uppercase tracking-widest mb-2 flex items-center justify-center lg:justify-start gap-2"><i class="fa-solid fa-stopwatch animate-pulse"></i> Faltan para el gran cambio:</p>
+                        <div class="flex gap-3 text-center" id="countdown-timer">
+                            <div class="bg-gradient-to-b from-secondary to-slate-900 rounded-xl px-4 py-2 min-w-[70px] border border-white/10 shadow-inner">
+                                <span id="cd-days" class="block text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-300">00</span>
+                                <span class="text-[10px] text-accent font-bold uppercase">Días</span>
+                            </div>
+                            <div class="bg-gradient-to-b from-secondary to-slate-900 rounded-xl px-4 py-2 min-w-[70px] border border-white/10 shadow-inner">
+                                <span id="cd-hours" class="block text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-300">00</span>
+                                <span class="text-[10px] text-accent font-bold uppercase">Hrs</span>
+                            </div>
+                            <div class="bg-gradient-to-b from-secondary to-slate-900 rounded-xl px-4 py-2 min-w-[70px] border border-white/10 shadow-inner">
+                                <span id="cd-mins" class="block text-2xl md:text-3xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-300">00</span>
+                                <span class="text-[10px] text-accent font-bold uppercase">Min</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center relative">
+                    <div class="relative w-full max-w-[320px] sm:max-w-[380px] lg:max-w-[420px]">
+                        <!-- Badge flotante -->
+                        <div class="absolute -top-4 -right-4 sm:-right-8 bg-gradient-to-r from-accent to-yellow-500 text-secondary font-black px-5 py-3 rounded-2xl shadow-xl z-20 animate-bounce-slow transform rotate-6 text-sm md:text-base border-2 border-white flex items-center gap-2">
+                            <i class="fa-solid fa-star text-white"></i> ¡Nuestra Candidata!
+                        </div>
+
+                        <!-- Contenedor Imagen -->
+                        <div class="p-3 bg-gradient-to-tr from-accent via-primary to-yellow-500 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.3)] hero-badge animate-float">
+                            <img src="https://prensaregional.pe/wp-content/uploads/2026/08/Jakelin-Ninaraqui-Pelaiza-FB-27022026-1.jpg" 
+                                 alt="Ing. Jakelin Ninaraqui Pelaiza" 
+                                 class="w-full object-cover rounded-[2.2rem] aspect-[3/4] border-4 border-white shadow-inner bg-slate-100 relative z-10">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejes Estratégicos (Dimensiones) Section -->
+    <section id="dimensiones" class="py-24 relative z-10 bg-transparent border-t border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 drop-shadow-[0_0_15px_rgba(255,255,255,0.9)] bg-white/20 p-6 rounded-2xl backdrop-blur-sm">
+                <span class="text-primary font-black tracking-widest uppercase text-sm mb-2 block">Visión al 2030</span>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-secondary mb-4">Plan de Gobierno Municipal</h2>
+                <div class="h-1.5 w-24 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-800 font-semibold text-lg">Conoce nuestras propuestas organizadas en cuatro dimensiones fundamentales para el desarrollo integral de la provincia.</p>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div id="tab-content-area" class="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12">
+                <button id="tab-btn-social" onclick="switchTab('social')" data-active-class="bg-blue-600 text-white shadow-lg shadow-blue-600/30 border-blue-600" class="tab-button flex items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base bg-blue-600 text-white shadow-lg shadow-blue-600/30 border-blue-600">
+                    <i class="fa-solid fa-people-group text-lg sm:text-xl"></i> Dimensión Social
+                </button>
+                <button id="tab-btn-economica" onclick="switchTab('economica')" data-active-class="bg-green-600 text-white shadow-lg shadow-green-600/30 border-green-600" class="tab-button flex items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base bg-white text-slate-600 font-semibold shadow-sm hover:shadow-md border border-slate-200">
+                    <i class="fa-solid fa-chart-line text-lg sm:text-xl"></i> Dimensión Económica
+                </button>
+                <button id="tab-btn-ambiental" onclick="switchTab('ambiental')" data-active-class="bg-emerald-600 text-white shadow-lg shadow-emerald-600/30 border-emerald-600" class="tab-button flex items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base bg-white text-slate-600 font-semibold shadow-sm hover:shadow-md border border-slate-200">
+                    <i class="fa-solid fa-leaf text-lg sm:text-xl"></i> Dimensión Ambiental
+                </button>
+                <button id="tab-btn-institucional" onclick="switchTab('institucional')" data-active-class="bg-purple-600 text-white shadow-lg shadow-purple-600/30 border-purple-600" class="tab-button flex items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base bg-white text-slate-600 font-semibold shadow-sm hover:shadow-md border border-slate-200">
+                    <i class="fa-solid fa-landmark-dome text-lg sm:text-xl"></i> Dimensión Institucional
+                </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="relative bg-transparent rounded-[2rem] p-6 sm:p-10 border border-white/20 shadow-xl overflow-hidden">
+                <div id="panel-social" class="block animate-fade-in-up">
+                    <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/DIMENCIONES/SIMENCION%20SOCIAL%201.jpg?raw=true" alt="Dimensión Social" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                </div>
+                <div id="panel-economica" class="hidden">
+                    <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/DIMENCIONES/ECONOMICO.jpg?raw=true" alt="Dimensión Económica" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                </div>
+                <div id="panel-ambiental" class="hidden">
+                    <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/DIMENCIONES/AMBIENTAL.jpg?raw=true" alt="Dimensión Ambiental" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                </div>
+                <div id="panel-institucional" class="hidden">
+                    <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/DIMENCIONES/INSTITUCIONAL.jpg?raw=true" alt="Dimensión Institucional" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gestión en Chen Chen Section -->
+    <section id="galeria" class="py-24 relative z-10 bg-transparent border-t border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 drop-shadow-[0_0_15px_rgba(255,255,255,0.9)] bg-white/20 p-6 rounded-2xl backdrop-blur-sm">
+                <span class="text-primary font-black tracking-widest uppercase text-sm mb-2 block">Experiencia Comprobada</span>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-secondary mb-4">Gestión en Chen Chen</h2>
+                <div class="h-1.5 w-24 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-800 font-semibold text-lg">Conoce los logros y gestiones realizadas durante nuestra administración en el Centro Poblado de Chen Chen.</p>
+            </div>
+
+            <!-- Tabs Navegación Gestión -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8 border-b-2 border-slate-200">
+                <button id="gal-btn-social" onclick="switchGaleriaTab('social')" class="px-6 py-3 bg-blue-500 text-white font-bold rounded-t-xl shadow-[0_-4px_10px_rgba(0,0,0,0.1)] transform transition-all translate-y-[2px]">Área Social</button>
+                <button id="gal-btn-ambiental" onclick="switchGaleriaTab('ambiental')" class="px-6 py-3 bg-white text-slate-500 font-bold rounded-t-xl hover:bg-slate-50 transition-all border border-b-0 border-slate-200">Área Ambiental</button>
+                <button id="gal-btn-institucional" onclick="switchGaleriaTab('institucional')" class="px-6 py-3 bg-white text-slate-500 font-bold rounded-t-xl hover:bg-slate-50 transition-all border border-b-0 border-slate-200">Área Institucional</button>
+            </div>
+
+            <!-- Contenidos Gestión -->
+            <div class="bg-transparent p-6 sm:p-10 rounded-b-2xl rounded-tr-2xl shadow-xl border border-white/20">
+                
+                <!-- Área Social Panel -->
+                <div id="gal-panel-social" class="block animate-fade-in-up">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-blue-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1SOCIAL/SOCIAL.png?raw=true" alt="Donación de pescado" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionaron donaciones de pescado en beneficio de las familias más vulnerables de Chen Chen.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-blue-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1SOCIAL/EQUIPOS%20DE%20FUTBOL%20.png?raw=true" alt="Equipos de fútbol" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo impulsaron el deporte entregando uniformes y apoyo a los equipos de fútbol locales.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-blue-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1SOCIAL/CAPACITACION.png?raw=true" alt="Capacitación" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo promovieron la realización de cursos y talleres gratuitos de capacitación para emprendedores.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Área Ambiental Panel -->
+                <div id="gal-panel-ambiental" class="hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-emerald-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1AMBIENTAL/ARBOLIZO.png?raw=true" alt="Arborización" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante la empresa privada la donación de plantones de diferentes especies para arborizar Chen Chen siendo beneficiados 28 asociaciones de Vivienda.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-emerald-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1AMBIENTAL/CANASTAS%20DE%20METAL%20.png?raw=true" alt="Canastas reciclaje" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante la empresa privada (Prometals) la donación de canastas de metal para el reciclaje de botellas de plástico promoviendo el cuidado del medio ambiente en Chen Chen.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-emerald-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1AMBIENTAL/PARADEROS%20INELIGENTES.png?raw=true" alt="Paraderos" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante la empresa privada (ENGIE) la instalación de Paraderos Inteligentes para ordenar el transporte urbano en Chen Chen siendo beneficiados 7 Rutas de Transporte.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-emerald-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1SOCIAL/POSTES.png?raw=true" alt="Luminarias" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante la empresa privada (Angloamerican) la donación de luminarias alimentadas por paneles fotovoltaicos para iluminar espacios públicos en 15 asociaciones de Vivienda.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-emerald-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1AMBIENTAL/CONTENEDORES.png?raw=true" alt="Contenedores" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante la Municipalidad Provincial para la donación de contenedores y el ingreso del camión recolector de residuos sólidos en mas asociaciones de vivienda de Chen Chen.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-emerald-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1AMBIENTAL/GAVIONES.png?raw=true" alt="Gaviones" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante la empresa privada (Fronteras del Sur) la donación de gaviones para mejorar la estabilidad de taludes en espacios públicos de 4 asociaciones de vivienda.</p></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Área Institucional Panel -->
+                <div id="gal-panel-institucional" class="hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-purple-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1INSTITUCIONAL/GESTION%20DE%20BOMBEROS.png?raw=true" alt="Bomberos" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante el Ministerio del Interior con apoyo congresal la creación del compañía de bomberos de Chen Chen para beneficio de toda la población.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-purple-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1INSTITUCIONAL/CREACION%20DE%20COLEGIO.png?raw=true" alt="Colegio" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante la UGEL Mariscal Nieto y la DREMO la creación del Colegio de nivel secundario "Pedro Mariano Cabello" para beneficio de la población escolar.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-purple-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1INSTITUCIONAL/CREACION%20DE%20LA%20COMISARIA.png?raw=true" alt="Comisaría" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante el Ministerio del Interior con apoyo congresal la creación de la comisaria de Chen Chen para beneficio de toda la población.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-purple-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1INSTITUCIONAL/MUSEO%20TIAGUANACO.png?raw=true" alt="Museo" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionaron ante la empresa privada la implementación del Museo TIWANAKU en las instalaciones de la Municipalidad para fortalecer nuestra identidad.</p></div>
+                        </div>
+                        <div class="bg-slate-50 rounded-2xl overflow-hidden shadow-md border-t-4 border-purple-500 hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/1INSTITUCIONAL/CAMIONETA.png?raw=true" alt="Camioneta" class="w-full h-48 object-cover cursor-pointer hover:opacity-90" onclick="openLightbox(this.src)">
+                            <div class="p-4"><p class="text-sm font-medium text-slate-700">JAKELIN y su equipo gestionó ante OSIPTEL la donación de un vehículo para el mejor desarrollo de las funciones de la Municipalidad y mejor servicio a la población.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Obras Estratégicas Propuestas -->
+    <section id="obras-propuestas" class="py-24 relative z-10 bg-transparent border-t border-white/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12 drop-shadow-[0_0_15px_rgba(255,255,255,0.9)] bg-white/20 p-6 rounded-2xl backdrop-blur-sm">
+                <span class="text-primary font-black tracking-widest uppercase text-sm mb-2 block">Futuro de Mariscal Nieto</span>
+                <h2 class="font-heading font-black text-3xl sm:text-4xl md:text-5xl text-secondary mb-4">Obras Estratégicas Propuestas</h2>
+                <div class="h-1.5 w-24 bg-gradient-to-r from-primary to-accent mx-auto rounded-full mb-6"></div>
+                <p class="text-slate-800 font-semibold text-lg">Nuestros proyectos bandera diseñados para potenciar el crecimiento y bienestar en toda la provincia.</p>
+            </div>
+
+            <!-- Tabs Obras -->
+            <div class="flex flex-wrap justify-center gap-2 mb-8 border-b-2 border-slate-200">
+                <button id="obras-btn-social" onclick="switchObrasTab('social')" class="px-6 py-3 bg-blue-600 text-white font-bold rounded-t-xl shadow-[0_-4px_10px_rgba(0,0,0,0.1)] transform transition-all translate-y-[2px]">Área Social</button>
+                <button id="obras-btn-economica" onclick="switchObrasTab('economica')" class="px-6 py-3 bg-white text-slate-500 font-bold rounded-t-xl hover:bg-slate-50 transition-all border border-b-0 border-slate-200">Área Económica</button>
+            </div>
+
+            <!-- Contenidos Obras -->
+            <div class="bg-transparent p-6 sm:p-10 rounded-b-2xl rounded-tr-2xl shadow-xl border border-white/20">
+                <!-- Área Social -->
+                <div id="obras-panel-social" class="block animate-fade-in-up">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/2.-SOCIAL/educacion_y_cultura.png?raw=true" alt="Educación" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                        <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/2.-SOCIAL/promocion_empleo.png?raw=true" alt="Empleo" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                        <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/2.-SOCIAL/seguridad.png?raw=true" alt="Seguridad" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                        <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/2.-SOCIAL/vias_y_servicios.png?raw=true" alt="Vías" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                    </div>
+                </div>
+
+                <!-- Área Económica -->
+                <div id="obras-panel-economica" class="hidden">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/2.-ECONOMICO/Salud.png?raw=true" alt="Salud" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                        <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/2.-ECONOMICO/agua_agricultura.png?raw=true" alt="Agua" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                        <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/2.-ECONOMICO/comercio_y_produccion.png?raw=true" alt="Comercio" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                        <img src="https://github.com/hivasac-oss/imagenes-web/blob/main/2.-ECONOMICO/gestion_municipal.png?raw=true" alt="Gestión" class="w-full h-auto rounded-xl shadow-md cursor-pointer hover:scale-[1.02] transition-transform duration-300 border border-slate-200" onclick="openLightbox(this.src)">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transparencia Section -->
+    <section id="transparencia" class="py-24 relative z-10 bg-slate-900/95 backdrop-blur-xl border-t border-slate-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-secondary rounded-[3rem] p-10 md:p-16 relative overflow-hidden shadow-2xl border border-slate-700">
+                <!-- Orbes de luz coloridos mejorados -->
+                <div class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full mix-blend-screen filter blur-[100px] opacity-60"></div>
+                <div class="absolute bottom-0 left-0 w-80 h-80 bg-accent rounded-full mix-blend-screen filter blur-[90px] opacity-40"></div>
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-600 rounded-full mix-blend-screen filter blur-[100px] opacity-30"></div>
+                
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent text-secondary font-bold text-sm mb-6 shadow-md border border-yellow-300">
+                            <i class="fa-solid fa-shield-halved"></i> Compromiso Cero Corrupción
+                        </div>
+                        <h2 class="font-heading font-black text-4xl md:text-5xl text-white mb-6 leading-tight drop-shadow-md">Transparencia y Rendición de Cuentas</h2>
+                        <p class="text-slate-200 text-lg mb-8 font-light">
+                            Garantizamos el acceso a la información. Cada sector de la Provincia Mariscal Nieto sabrá exactamente en qué se invierten sus recursos.
+                        </p>
+                        <div class="bg-gradient-to-r from-primary/30 to-primary/5 border-l-4 border-accent p-6 rounded-r-xl backdrop-blur-md shadow-inner">
+                            <p class="text-white font-medium text-lg italic leading-relaxed">"Ninguna obra pública se iniciará ni concluirá sin la publicación transparente de sus costos finales detallados."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-5">
+                        <div class="bg-white/10 border border-white/20 p-5 rounded-3xl backdrop-blur-md flex gap-4 items-start hover:bg-white/20 transition-all shadow-lg hover:-translate-y-1">
+                            <div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-white to-slate-200 flex items-center justify-center text-primary text-xl shadow-inner"><i class="fa-solid fa-users-viewfinder"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1">Audiencias Descentralizadas</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">Dos audiencias semestrales, rotando la sede en distritos como Torata, Carumas o San Antonio.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white/10 border border-white/20 p-5 rounded-3xl backdrop-blur-md flex gap-4 items-start hover:bg-white/20 transition-all shadow-lg hover:-translate-y-1">
+                            <div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-white to-slate-200 flex items-center justify-center text-primary text-xl shadow-inner"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1">App "Mariscal Transparente"</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">Semáforo de cumplimiento (Verde, Ámbar, Rojo) y mapa interactivo con fotografías y presupuesto.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white/10 border border-white/20 p-5 rounded-3xl backdrop-blur-md flex gap-4 items-start hover:bg-white/20 transition-all shadow-lg hover:-translate-y-1">
+                            <div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-white to-slate-200 flex items-center justify-center text-primary text-xl shadow-inner"><i class="fa-solid fa-comments"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1">Comités de Vigilancia y Presupuesto</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">Mesas de Diálogo Sectorial y 85% de ejecución de los acuerdos del Presupuesto Participativo.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white/10 border border-white/20 p-5 rounded-3xl backdrop-blur-md flex gap-4 items-start hover:bg-white/20 transition-all shadow-lg hover:-translate-y-1">
+                            <div class="w-12 h-12 shrink-0 rounded-2xl bg-gradient-to-br from-white to-slate-200 flex items-center justify-center text-primary text-xl shadow-inner"><i class="fa-solid fa-earth-americas"></i></div>
+                            <div>
+                                <h4 class="text-white font-bold text-lg mb-1">Comunicación Multicultural</h4>
+                                <p class="text-slate-300 text-sm leading-relaxed">Difusión radial e infografías en castellano, aimara y quechua según cada comunidad.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-transparent border-t border-white/20 pt-20 pb-10 relative z-10 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center mb-6">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Acci%C3%B3n_Popular.svg" alt="Acción Popular" class="w-16 h-16 object-contain filter drop-shadow-md">
+            </div>
+            <h3 class="font-heading font-black text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary mb-2">Jakelin Ninaraqui Pelaiza</h3>
+            <p class="text-primary font-black tracking-widest uppercase text-xs sm:text-sm mb-6">Candidata a la Alcaldía Provincial</p>
+            <p class="text-slate-900 font-bold mb-10 max-w-xl mx-auto text-sm sm:text-base">Plan de Gobierno Municipal 2027-2030. Gestión Técnica y Social con Manos Limpias, por el desarrollo integral de Mariscal Nieto.</p>
+            
+            <div class="flex justify-center gap-5 sm:gap-6 mb-10">
+                <a href="https://www.facebook.com/profile.php?id=61583008940407" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-2xl bg-[#1877F2] text-white flex items-center justify-center text-xl hover:bg-blue-800 transition-all shadow-lg hover:-translate-y-1" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/jakelin.ninaraqui/?hl=es" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white flex items-center justify-center text-xl hover:opacity-80 transition-all shadow-lg hover:-translate-y-1" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@jakelin.ninaraqui?_r=1&_t=ZS-99lId6RMDaa" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-2xl bg-black text-white flex items-center justify-center text-xl hover:bg-slate-800 transition-all shadow-lg hover:-translate-y-1" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            
+            <div class="border-t border-slate-400 pt-8 mt-4">
+                <p class="text-xs sm:text-sm text-slate-800 font-bold">© 2027 Partido Político Acción Popular - Provincia Mariscal Nieto. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notificación Toast para Audio -->
+    <div id="audioToast" class="fixed top-24 sm:top-10 left-1/2 transform -translate-x-1/2 bg-secondary text-white px-5 sm:px-6 py-3 rounded-full shadow-2xl z-[1000] hidden transition-opacity duration-300 opacity-0 flex items-center gap-3 border border-slate-700 w-max max-w-[90vw]">
+        <i class="fa-solid fa-circle-exclamation text-accent"></i>
+        <span id="audioToastMsg" class="text-xs sm:text-sm font-medium">Notificación de audio.</span>
+    </div>
+
+    <!-- Reproductor de Campaña Flotante -->
+    <div class="fixed bottom-6 right-6 z-[999] flex flex-col items-end gap-2 group">
+        <!-- Panel de Playlist -->
+        <div id="musicPanel" class="hidden bg-white rounded-2xl shadow-2xl border border-slate-200 p-4 w-64 sm:w-72 transform transition-all origin-bottom-right mb-2">
+            <div class="flex items-center justify-between mb-3 border-b border-slate-100 pb-2">
+                <h4 class="font-bold text-secondary text-xs sm:text-sm flex items-center gap-2">
+                    <i class="fa-solid fa-compact-disc text-primary animate-spin" style="animation-duration: 3s;"></i> Canciones de Campaña
+                </h4>
+                <button onclick="toggleMusicPanel()" class="text-slate-400 hover:text-primary transition-colors p-1" aria-label="Cerrar playlist"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="space-y-1.5">
+                <button onclick="playSong('https://docs.google.com/uc?export=download&id=18eyM0nHUeRyEtbiHd1qWf8FudbCu_fKw', this, 'Fuerza Moquegua')" class="song-btn w-full text-left px-3 py-2.5 text-xs sm:text-sm rounded-lg hover:bg-primary/10 hover:text-primary text-slate-700 transition-colors font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-play text-[10px] sm:text-xs opacity-50 shrink-0"></i> <span class="truncate">1. Fuerza Moquegua</span>
+                </button>
+                <button onclick="playSong('2.-Unete al baile.mp3', this, 'Únete al Baile')" class="song-btn w-full text-left px-3 py-2.5 text-xs sm:text-sm rounded-lg hover:bg-primary/10 hover:text-primary text-slate-700 transition-colors font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-play text-[10px] sm:text-xs opacity-50 shrink-0"></i> <span class="truncate">2. Únete al baile</span>
+                </button>
+                <button onclick="playSong('3.-jakelin.mpeg', this, 'Jakelin')" class="song-btn w-full text-left px-3 py-2.5 text-xs sm:text-sm rounded-lg hover:bg-primary/10 hover:text-primary text-slate-700 transition-colors font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-play text-[10px] sm:text-xs opacity-50 shrink-0"></i> <span class="truncate">3. Jakelin</span>
+                </button>
+            </div>
+        </div>
+
+        <audio id="campaignAudio" loop preload="none">
+            <source src="https://docs.google.com/uc?export=download&id=18eyM0nHUeRyEtbiHd1qWf8FudbCu_fKw" type="audio/mpeg">
+        </audio>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+            <button onclick="toggleMusicPanel()" class="bg-white text-slate-800 text-xs sm:text-sm font-semibold py-2.5 sm:py-3 px-4 sm:px-5 rounded-full shadow-lg border border-slate-200 hover:text-primary hover:border-primary/30 transition-colors duration-300 flex items-center gap-2">
+                <i class="fa-solid fa-list-ul"></i> <span class="hidden sm:inline">Playlist</span>
+            </button>
+            <button onclick="toggleMusic()" id="musicBtn" class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-primary to-primary-dark text-white flex items-center justify-center text-lg sm:text-2xl shadow-[0_0_20px_rgba(185,28,28,0.6)] hover:scale-105 hover:shadow-[0_0_25px_rgba(185,28,28,0.8)] transition-all duration-300 animate-pulse border-2 border-white" aria-label="Reproducir música principal">
+                <i id="musicIcon" class="fa-solid fa-play"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Botón Volver Arriba -->
+    <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="fixed bottom-6 left-6 z-[980] w-12 h-12 rounded-full bg-secondary/90 backdrop-blur-md text-white flex items-center justify-center text-lg shadow-xl border border-white/20 hover:bg-primary hover:scale-110 transition-all duration-300 opacity-0 translate-y-10 pointer-events-none" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal para ampliar imágenes (Lightbox) -->
+    <div id="imageLightbox" class="fixed inset-0 z-[9999] bg-slate-900/95 backdrop-blur-md hidden flex items-center justify-center opacity-0 transition-opacity duration-300" onclick="closeLightbox(event)">
+        <button onclick="closeLightbox(event, true)" class="absolute top-4 right-4 sm:top-6 sm:right-8 text-white text-4xl hover:text-accent transition-colors z-50 focus:outline-none drop-shadow-md" aria-label="Cerrar imagen">&times;</button>
+        <img id="lightboxImg" src="" alt="Imagen ampliada" class="max-w-[95vw] max-h-[90vh] object-contain rounded-2xl shadow-2xl transform scale-95 transition-transform duration-300 border border-white/10">
+    </div>
+
+    <script>
+        // --- Mobile Menu Logic ---
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('mobileMenuIcon');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        // --- Tabs (Plan de Gobierno) Logic ---
+        const tabKeys = ['social', 'economica', 'ambiental', 'institucional'];
+        
+        function switchTab(activeKey) {
+            tabKeys.forEach(key => {
+                const panel = document.getElementById(`panel-${key}`);
+                const btn = document.getElementById(`tab-btn-${key}`);
+                const activeColorClass = btn.getAttribute('data-active-class');
+                const defaultClass = 'bg-white text-slate-600 font-semibold shadow-sm hover:shadow-md border border-slate-200';
+                
+                if (key === activeKey) {
+                    panel.classList.remove('hidden');
+                    setTimeout(() => { panel.classList.add('block', 'animate-fade-in-up'); }, 10);
+                    btn.className = `tab-button flex items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${activeColorClass}`;
+                } else {
+                    panel.classList.add('hidden');
+                    panel.classList.remove('block', 'animate-fade-in-up');
+                    btn.className = `tab-button flex items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 sm:py-4 rounded-2xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${defaultClass}`;
+                }
+            });
+
+            // Smooth Auto-Scroll adjusting for fixed navbar
+            const containerScroll = document.getElementById('tab-content-area');
+            if (containerScroll) {
+                const isMobile = window.innerWidth < 768;
+                const yOffset = isMobile ? -140 : -100;
+                const y = containerScroll.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+        }
+
+        // --- Tabs (Gestión Chen Chen Colorido) Logic ---
+        const galeriaTabKeys = ['social', 'ambiental', 'institucional'];
+        
+        function switchGaleriaTab(activeKey) {
+            galeriaTabKeys.forEach(key => {
+                const panel = document.getElementById(`gal-panel-${key}`);
+                const btn = document.getElementById(`gal-btn-${key}`);
+                
+                if (key === activeKey) {
+                    panel.classList.remove('hidden');
+                    setTimeout(() => { panel.classList.add('block', 'animate-fade-in-up'); }, 10);
+                    
+                    let colorClass = 'bg-primary';
+                    if(key === 'social') colorClass = 'bg-blue-500';
+                    if(key === 'ambiental') colorClass = 'bg-emerald-500';
+                    if(key === 'institucional') colorClass = 'bg-purple-500';
+
+                    btn.className = `px-6 py-3 ${colorClass} text-white font-bold rounded-t-xl shadow-[0_-4px_10px_rgba(0,0,0,0.1)] transform transition-all translate-y-[2px]`;
+                } else {
+                    panel.classList.add('hidden');
+                    panel.classList.remove('block', 'animate-fade-in-up');
+                    btn.className = 'px-6 py-3 bg-white text-slate-500 font-bold rounded-t-xl hover:bg-slate-50 transition-all border border-b-0 border-slate-200';
+                }
+            });
+        }
+
+        // --- Tabs (Obras Propuestas) Logic ---
+        const obrasTabKeys = ['social', 'economica'];
+        
+        function switchObrasTab(activeKey) {
+            obrasTabKeys.forEach(key => {
+                const panel = document.getElementById(`obras-panel-${key}`);
+                const btn = document.getElementById(`obras-btn-${key}`);
+                
+                if (key === activeKey) {
+                    panel.classList.remove('hidden');
+                    setTimeout(() => { panel.classList.add('block', 'animate-fade-in-up'); }, 10);
+                    
+                    let bgColor = key === 'social' ? 'bg-blue-600' : 'bg-green-600';
+                    btn.className = `px-6 py-3 ${bgColor} text-white font-bold rounded-t-xl shadow-[0_-4px_10px_rgba(0,0,0,0.1)] transform transition-all translate-y-[2px]`;
+                } else {
+                    panel.classList.add('hidden');
+                    panel.classList.remove('block', 'animate-fade-in-up');
+                    btn.className = 'px-6 py-3 bg-white text-slate-500 font-bold rounded-t-xl hover:bg-slate-50 transition-all border border-b-0 border-slate-200';
+                }
+            });
+        }
+
+        // --- Music Player Logic ---
+        const audio = document.getElementById("campaignAudio");
+        const musicIcon = document.getElementById("musicIcon");
+        const musicBtn = document.getElementById("musicBtn");
+        const musicPanel = document.getElementById("musicPanel");
+        const audioToast = document.getElementById("audioToast");
+        const audioToastMsg = document.getElementById("audioToastMsg");
+        let isPlaying = false;
+
+        function showAudioAlert(msg) {
+            audioToastMsg.innerText = msg;
+            audioToast.classList.remove('hidden');
+            setTimeout(() => audioToast.classList.remove('opacity-0'), 10);
+            setTimeout(() => {
+                audioToast.classList.add('opacity-0');
+                setTimeout(() => audioToast.classList.add('hidden'), 300);
+            }, 3500);
+        }
+
+        function toggleMusicPanel() {
+            musicPanel.classList.toggle("hidden");
+        }
+
+        function playSong(src, btnElement, songName) {
+            document.querySelectorAll('.song-btn').forEach(b => {
+                b.classList.remove('bg-primary', 'text-white');
+                b.classList.add('hover:bg-primary/10', 'hover:text-primary', 'text-slate-700');
+                b.querySelector('i').classList.remove('fa-pause', 'text-white');
+                b.querySelector('i').classList.add('fa-play', 'opacity-50');
+            });
+            
+            if(btnElement) {
+                btnElement.classList.remove('hover:bg-primary/10', 'hover:text-primary', 'text-slate-700');
+                btnElement.classList.add('bg-primary', 'text-white');
+                btnElement.querySelector('i').classList.remove('fa-play', 'opacity-50');
+                btnElement.querySelector('i').classList.add('fa-pause');
+            }
+            
+            audio.src = src;
+            const playPromise = audio.play();
+            
+            if (playPromise !== undefined) {
+                playPromise.then(() => {
+                    isPlaying = true;
+                    musicIcon.classList.remove("fa-play");
+                    musicIcon.classList.add("fa-pause");
+                    musicBtn.classList.remove("animate-pulse");
+                    if(songName) showAudioAlert(`Reproduciendo: ${songName}`);
+                }).catch(e => {
+                    console.warn("Audio blocked or not found:", e);
+                    showAudioAlert("Error al reproducir el archivo de audio.");
+                    isPlaying = false;
+                    musicIcon.classList.add("fa-play");
+                    musicIcon.classList.remove("fa-pause");
+                });
+            }
+        }
+
+        function toggleMusic() {
+            if (isPlaying) {
+                audio.pause();
+                musicIcon.classList.remove("fa-pause");
+                musicIcon.classList.add("fa-play");
+                musicBtn.classList.add("animate-pulse");
+                isPlaying = false;
+            } else {
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        musicIcon.classList.remove("fa-play");
+                        musicIcon.classList.add("fa-pause");
+                        musicBtn.classList.remove("animate-pulse");
+                        isPlaying = true;
+                    }).catch(e => {
+                        showAudioAlert("Por favor, abre la Playlist y selecciona una canción primero.");
+                        isPlaying = false;
+                        musicPanel.classList.remove("hidden"); 
+                    });
+                }
+            }
+        }
+
+        // --- Scroll to Top Button Logic ---
+        window.addEventListener('scroll', () => {
+            const scrollBtn = document.getElementById('scrollTopBtn');
+            if(scrollBtn) {
+                if (window.scrollY > 400) {
+                    scrollBtn.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
+                    scrollBtn.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                } else {
+                    scrollBtn.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
+                    scrollBtn.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                }
+            }
+        });
+
+        // --- Countdown Timer Logic ---
+        function initCountdown() {
+            const targetDate = new Date("October 4, 2026 08:00:00").getTime();
+
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = targetDate - now;
+
+                if (distance < 0) {
+                    clearInterval(timer);
+                    const container = document.getElementById("countdown-timer");
+                    if(container) container.innerHTML = "<div class='text-accent font-black text-xl px-4'>¡LLEGÓ EL DÍA DEL CAMBIO!</div>";
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+                const eDays = document.getElementById("cd-days");
+                const eHours = document.getElementById("cd-hours");
+                const eMins = document.getElementById("cd-mins");
+                
+                if(eDays) eDays.innerText = days.toString().padStart(2, '0');
+                if(eHours) eHours.innerText = hours.toString().padStart(2, '0');
+                if(eMins) eMins.innerText = minutes.toString().padStart(2, '0');
+            }, 1000);
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            initCountdown();
+        });
+
+        // --- Lightbox Logic (Zoom de Imágenes) ---
+        function openLightbox(src) {
+            const lightbox = document.getElementById('imageLightbox');
+            const img = document.getElementById('lightboxImg');
+            
+            img.src = src;
+            lightbox.classList.remove('hidden');
+            
+            // Evitar que la página de fondo haga scroll cuando la imagen está abierta
+            document.body.style.overflow = 'hidden';
+            
+            // Pequeño retraso para que la transición de CSS se aplique
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                img.classList.remove('scale-95');
+                img.classList.add('scale-100');
+            }, 10);
+        }
+
+        function closeLightbox(e, force = false) {
+            // Cierra si se fuerza (clic en la X) o si se hace clic en el fondo (fuera de la imagen)
+            if (force || e.target === document.getElementById('imageLightbox')) {
+                const lightbox = document.getElementById('imageLightbox');
+                const img = document.getElementById('lightboxImg');
+                
+                lightbox.classList.add('opacity-0');
+                img.classList.remove('scale-100');
+                img.classList.add('scale-95');
+                
+                // Restaurar el scroll normal de la página
+                document.body.style.overflow = '';
+                
+                setTimeout(() => {
+                    lightbox.classList.add('hidden');
+                    img.src = ""; // Limpiar la ruta por seguridad
+                }, 300);
+            }
+        }
+    </script>
+</body>
+</html>
